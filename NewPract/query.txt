@@ -1,0 +1,9 @@
+cur.execute('SELECT Region, Population FROM PopbyRegion')
+cur.execute('SELECT Region,Population FROM PopbyRegion WHERE Population>1000000')
+cur.execute('SELECT Region,Population FROM PopbyRegion WHERE Population>1000000 AND Region<"L"')
+cur.execute('SELECT Region FROM PopbyRegion')
+
+cur.execute('SELECT * FROM PopbyRegion WHERE Region="Japan"')
+cur.execute('UPDATE PopbyRegion SET Population=106000 WHERE Region="Japan"')
+
+cur.execute('DROP TABLE PopbyRegion')
